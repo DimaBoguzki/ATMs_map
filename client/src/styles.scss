@@ -1,0 +1,35 @@
+.app{
+  height: 100vh;
+}
+.leaflet-container {
+  width: 100%;
+  height: 100vh;
+}
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	.col-lg-12 {width: 100%;}
+	.col-lg-11_5 {width: 95.83333333%;}
+	.col-lg-11 {width: 91.66666667%;}
+	.col-lg-10 {width: 83.33333333%;}
+	.col-lg-9_5 {width: 79.16666667%;}
+	.col-lg-9 {width: 75%;}
+	.col-lg-8_5 {width: 70.83333333%;}
+	.col-lg-8 {width: 66.66666667%;}
+	.col-lg-7_5 {width: 62.5%;}
+	.col-lg-7 {width: 58.33333333%;}
+	.col-lg-6_5 {width: 54.16666667%;}
+	.col-lg-6 {width: 50%;}
+	.col-lg-5_5 {width: 45.83333333%;}
+	.col-lg-5 {width: 41.66666667%;}
+	.col-lg-4_5 {width: 37.5%;}
+	.col-lg-4 {width: 33.33333333%;}
+	.col-lg-3_5 {width: 29.16666667%;}
+	.col-lg-3 {width: 25%;}
+	.col-lg-2_5 {width: 20.83333333%;}
+	.col-lg-2 {width: 16.66666667%;}
+	.col-lg-1_5 {width: 12.5%;}
+	.col-lg-1 {width: 8.33333333%;}
+	.col-lg-0_5 {width: 4.166666667%;}
+}
