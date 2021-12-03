@@ -1,4 +1,5 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import React from 'react';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import * as L from "leaflet";
 import { ATM_TYPE } from './api';
 
@@ -20,14 +21,22 @@ orangeIcon = new LeafIcon({
   iconUrl:"https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|ff8300&chf=a,s,ee00FFFF"
 });
 
+function MapControler({zoom, center}) {
+  const map = useMap()
+  React.useEffect(()=>{
+    if(zoom && center)
+      map.setView(center, zoom);
+  },[zoom, center])
+  return null
+}
+
 export function Map({markers, center, zoom}){
-  console.log(zoom,"");
   return(
     <MapContainer 
       center={center ? center : MapTools.initialPostiion} 
       zoom={zoom ? zoom : MapTools.initialZoom} 
-      scrollWheelZoom={false}
     >
+      <MapControler center={center} zoom={zoom}/>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
