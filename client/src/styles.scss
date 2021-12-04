@@ -96,3 +96,33 @@ button{
 	padding: 8px;
 	box-sizing: border-box;
 }
+.cards-container{
+	padding: 8px;
+	max-height: 80vh;
+	overflow-y: auto;
+}
+.atm-card{
+	align-items: center;
+	border: 1px solid #ddd;
+	box-shadow: 0px 1px 2px #ddd;
+	padding: 16px 8px;
+	box-sizing: border-box;
+	margin: 8px 0;
+	.icon{
+		cursor: pointer;
+		width: 20%;
+		img{
+			width: 22px;
+		}
+	}
+	.info{
+		width: 80%;
+		text-align: center;
+		h4{
+			margin: 0;
+		}
+		p{
+			margin: 0;
+		}
+	}
+}

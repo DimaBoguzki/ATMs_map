@@ -12,14 +12,12 @@ export class MapTools{
     return a > b ? [b,a] : [a,b];
   }
 }
+const BLUE_ICON_URL= "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|2975e6&chf=a,s,ee00FFFF";
+const ORANGE_ICON_URL = "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|ff8300&chf=a,s,ee00FFFF";
 
 const LeafIcon = L.Icon.extend({options: {}});
-const blueIcon = new LeafIcon({
-  iconUrl:"https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|2975e6&chf=a,s,ee00FFFF"
-}),
-orangeIcon = new LeafIcon({
-  iconUrl:"https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|ff8300&chf=a,s,ee00FFFF"
-});
+const blueIcon = new LeafIcon({iconUrl: BLUE_ICON_URL}), 
+  orangeIcon = new LeafIcon({iconUrl: ORANGE_ICON_URL});
 
 function MapControler({zoom, center}) {
   const map = useMap()
